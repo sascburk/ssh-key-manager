@@ -6,13 +6,21 @@ Voraussetzung auf dem System: OpenSSH (`ssh-keygen`, `ssh-copy-id`, `ssh`).
 
 ## Installieren
 
+Der Installer legt den Befehl `ssh-key-manager` isoliert ab (`uv`, sonst `pipx`). Unter Omarchy trägt er die App zusätzlich im App-Menü ein (Super + Leertaste, unter Apps).
+
+Direkt von GitHub:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/sascburk/ssh-key-manager/main/install.sh | bash
+```
+
 Aus einem Clone:
 
 ```bash
-pipx install .
+./install.sh
 ```
 
-`pipx` legt den Befehl `ssh-key-manager` isoliert ab. Alternativ in eine virtuelle Umgebung:
+Ohne Menüeintrag, nur in eine virtuelle Umgebung:
 
 ```bash
 python -m venv .venv
@@ -20,10 +28,10 @@ source .venv/bin/activate
 pip install .
 ```
 
-Direkt von GitHub, sobald das Repository steht:
+Den Menüeintrag wieder entfernen:
 
 ```bash
-pipx install "git+https://github.com/sascburk/ssh-key-manager.git"
+omarchy-tui-remove "SSH Key Manager"
 ```
 
 ## Starten
