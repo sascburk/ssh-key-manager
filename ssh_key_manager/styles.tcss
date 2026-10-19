@@ -1,0 +1,58 @@
+Screen {
+    background: $background;
+    color: $foreground;
+}
+
+.title {
+    text-style: bold;
+    color: $primary;
+    margin-bottom: 1;
+}
+
+#menu-wrap {
+    align: center middle;
+    height: 1fr;
+    padding: 2 4;
+}
+
+#menu-wrap OptionList {
+    width: 60%;
+    border: round $primary;
+    background: $surface;
+}
+
+#form {
+    padding: 2 4;
+    width: 90%;
+    max-width: 100;
+}
+
+#form Input, #form Select {
+    margin-bottom: 1;
+}
+
+#form Button {
+    margin-top: 1;
+}
+
+#host-actions {
+    margin-top: 1;
+    height: auto;
+}
+
+DataTable {
+    background: $surface;
+}
+
+Button {
+    background: $surface;
+}
+
+Button:hover {
+    background: $primary;
+}
+
+Button.-primary {
+    background: $primary;
+    color: $background;
+}

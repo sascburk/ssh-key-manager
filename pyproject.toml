@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ssh-key-manager"
+version = "0.1.0"
+description = "Terminal-App zum Erstellen von SSH-Keys und zum passwortlosen Login auf Servern"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "textual>=1.0",
+]
+
+[project.scripts]
+ssh-key-manager = "ssh_key_manager.app:main"
+
+[tool.setuptools.packages.find]
+include = ["ssh_key_manager*"]
+
+[tool.setuptools.package-data]
+ssh_key_manager = ["*.tcss"]
